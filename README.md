@@ -1,4 +1,4 @@
-# **Subway Argento!**
+# **:hamburger:Subway Argento:hamburger:**
 ### Trabajo práctico de semáforos, Sistemas Operativos y Redes
 
 En la cocina de Subway Argento compiten cuatro equipos de cocineros
