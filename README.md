@@ -17,7 +17,7 @@ Necesitamos demostrar la concurrencia y organización para poder simular una com
 ### _Pseudocódigo_ 📋
 
 Veamos como se comporta inicialmente con un pseudocódigo básico:
-'''
+```
 main {
   creamos e inicializamos hilos de equipos;
   semáforo_hornear seteado en 2;
@@ -40,4 +40,4 @@ _No necesita esperar la señal de nadie ya que es el primer paso de la receta_
 _Doy la señal a la siguiente accion (cortarcondimentosiniciales me habilita mezclar)_
   v(sem_mezclar);
 }
-'''
+```
