@@ -35,9 +35,9 @@ imprimirAccion {
 }
 
 cortarCondimentosIniciales {
-_No necesita esperar la señal de nadie ya que es el primer paso de la receta_
+//No necesita esperar la señal de nadie ya que es el primer paso de la receta
   cortar;
-_Doy la señal a la siguiente accion (cortarcondimentosiniciales me habilita mezclar)_
+//Doy la señal a la siguiente accion (cortarcondimentosiniciales me habilita mezclar)
   v(sem_mezclar);
 }
 ```
