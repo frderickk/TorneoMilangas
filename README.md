@@ -119,13 +119,15 @@ armar {
 
 ![PSEUDO](https://user-images.githubusercontent.com/22090492/115168134-43e8d800-a090-11eb-9221-f3ee32743eba.png)
 
-------------
+
 
 ## Prueba de escritorio ⌨️
 
-
-
 ------------
+
+![prueba](https://user-images.githubusercontent.com/22090492/115170533-43077480-a097-11eb-9377-1ec8e7709821.png)
+
+
 
 ## Autor ✒️
 
