@@ -101,4 +101,4 @@ armar {
 
 ## Autor ✒️
 
-* **Federico Farias** - *Trabajo Inicial* - [villanuevand](https://github.com/frderickk)
+* **Federico Farias** - *Trabajo Práctico de Semáforos y Threads* - [Github](https://github.com/frderickk)
