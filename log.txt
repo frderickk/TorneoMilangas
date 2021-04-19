@@ -1,0 +1,128 @@
+
+	Equipo 3 - Horneando 
+ 	Pan
+ 
+
+	Equipo 2 - Cortando ingredientes 
+ 	Ajo 
+	Perejil
+ 
+
+	Equipo 2 - Horneando 
+ 	Pan
+ 
+
+	Equipo 3 - Cortando ingredientes 
+ 	Ajo 
+	Perejil
+ 
+
+	Equipo 1 - Cortando ingredientes 
+ 	Ajo 
+	Perejil
+ 
+
+	Equipo 4 - Cortando ingredientes 
+ 	Ajo 
+	Perejil
+ 
+
+	Equipo 3 - Mezclando ingredientes 
+ 	Ajo 
+	Perejil 
+	Huevo 
+	Carne
+ 
+
+	Equipo 2 - Mezclando ingredientes 
+ 	Ajo 
+	Perejil 
+	Huevo 
+	Carne
+ 
+
+	Equipo 1 - Mezclando ingredientes 
+ 	Ajo 
+	Perejil 
+	Huevo 
+	Carne
+ 
+
+	Equipo 4 - Mezclando ingredientes 
+ 	Ajo 
+	Perejil 
+	Huevo 
+	Carne
+ 
+
+	Equipo 2 - Salando a gusto 
+ 	Ajo 
+	Perejil 
+	Huevo 
+	Carne
+ 
+
+	Equipo 2 - Empanando 
+ 	Milanga
+ 
+
+	Equipo 3 - Salando a gusto 
+ 	Ajo 
+	Perejil 
+	Huevo 
+	Carne
+ 
+
+	Equipo 3 - Empanando 
+ 	Milanga
+ 
+
+	Equipo 1 - Salando a gusto 
+ 	Ajo 
+	Perejil 
+	Huevo 
+	Carne
+ 
+
+	Equipo 1 - Empanando 
+ 	Milanga
+ 
+
+	Equipo 4 - Salando a gusto 
+ 	Ajo 
+	Perejil 
+	Huevo 
+	Carne
+ 
+
+	Equipo 4 - Empanando 
+ 	Milanga
+ 
+
+	Equipo 3 - Friendo 
+ 	Milanga
+ 
+
+	Equipo 4 - Horneando 
+ 	Pan
+ 
+
+	Equipo 1 - Horneando 
+ 	Pan
+ 
+
+	Equipo 3 - Cortando condimentos 
+ 	Lechuga 
+	Tomate 
+	Pepino 
+	Cebolla Morada
+ 
+
+	Equipo 4 - Friendo 
+ 	Milanga
+ 
+
+	Equipo 3 - - - - - - - - - - 
+ 	SANGUCHE DE MILANGA COMPLETADO!!!
+ 
+	El equipo 3 gano!!! 

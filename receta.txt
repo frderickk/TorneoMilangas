@@ -1,0 +1,8 @@
+Cortando ingredientes|Ajo|Perejil
+Mezclando ingredientes|Ajo|Perejil|Huevo|Carne
+Salando a gusto|Ajo|Perejil|Huevo|Carne
+Empanando|Milanga
+Friendo|Milanga
+Horneando|Pan
+Cortando condimentos|Lechuga|Tomate|Pepino|Cebolla Morada
+- - - - - - - - -|SANGUCHE DE MILANGA COMPLETADO!!!
