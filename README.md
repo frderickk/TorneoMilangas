@@ -94,3 +94,7 @@ armar {
   exit;
 }
 ```
+
+### Flujo de la competición
+
+![PSEUDO](https://user-images.githubusercontent.com/22090492/115167977-cd4bda80-a08f-11eb-872b-a9ce424006de.png)
