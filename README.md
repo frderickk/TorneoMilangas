@@ -1,10 +1,10 @@
 # **:hamburger:Subway Argento:hamburger:**
-## Trabajo práctico de semáforos, Sistemas Operativos y Redes
+## Trabajo Práctico de Semáforos y Threads, Sistemas Operativos y Redes
 
 
 
 
-# Introduccion
+# Introduccion 📋
 
 _En la cocina de Subway Argento compiten cuatro equipos de cocineros
 para ganarse el puesto de trabajo en el local. ¿Quién será el primero en
@@ -14,7 +14,7 @@ local?_
 _Necesitamos demostrar la concurrencia y organización para poder simular una competencia real, por eso es de suma importancia que utilicemos los semáforos correctos y la cantidad de threads necesarios para cada equipo y acción dentro del programa._
 
 
-### Pseudocódigo 📋
+### Pseudocódigo 📦
 
 _Veamos como se comporta inicialmente con un pseudocódigo básico:_
 ```c
@@ -95,7 +95,7 @@ armar {
 }
 ```
 
-### Flujo de la competición
+### Flujo del programa ⌨️
 
 ![PSEUDO](https://user-images.githubusercontent.com/22090492/115168134-43e8d800-a090-11eb-9221-f3ee32743eba.png)
 
