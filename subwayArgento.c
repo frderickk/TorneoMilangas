@@ -19,7 +19,7 @@ sem_t sem_hornear;
 struct semaforos {
     	sem_t sem_mezclar;
     	sem_t sem_empanar;
-    	sem_t sem_cortarfinal;
+    	sem_t sem_cortarFinal;
     	sem_t sem_salar;
 	sem_t sem_freir;
 	sem_t sem_armar;
@@ -72,7 +72,7 @@ void* imprimirAccion(void *data, char *accionIn) {
 	fclose(log);
 }
 
-void* cortarcondimentosiniciales(void *data) {
+void* cortarCondimentosIniciales(void *data) {
 	//creo el nombre de la accion de la funcion 
 	char *accion = "Cortando ingredientes";
 	//creo el puntero para pasarle la referencia de memoria (data) del struct pasado por parametro (la cual es un puntero). 
@@ -81,7 +81,7 @@ void* cortarcondimentosiniciales(void *data) {
 	imprimirAccion(mydata,accion);
 	//uso sleep para simular que que pasa tiempo
 	sleep(1);
-	//doy la señal a la siguiente accion (cortarcondimentosiniciales me habilita mezclar)
+	//doy la señal a la siguiente accion (cortarCondimentosIniciales me habilita mezclar)
 	sem_post(&mydata->semaforos_param.sem_mezclar);
 	pthread_exit(NULL);
 }
@@ -147,8 +147,8 @@ void* freir(void *data) {
 	imprimirAccion(mydata,accion);
 	//uso sleep para simular que que pasa tiempo
 	sleep(6);
-	//doy la señal a la siguiente accion (cortarcondimentosiniciales me habilita mezclar)
-    	sem_post(&mydata->semaforos_param.sem_cortarfinal);
+	//doy la señal a la siguiente accion (freir me habiilta cortarFinal)
+    	sem_post(&mydata->semaforos_param.sem_cortarFinal);
     	//desbloqueo el sarten
 	pthread_mutex_unlock(&mutex_freir);
 	pthread_exit(NULL);
@@ -172,17 +172,17 @@ void* hornear(void *data) {
 	pthread_exit(NULL);
 }
 
-void* cortarfinal(void *data) {
+void* cortarFinal(void *data) {
 	//creo el nombre de la accion de la funcion 
 	char *accion = "Cortando condimentos";
 	//creo el puntero para pasarle la referencia de memoria (data) del struct pasado por parametro (la cual es un puntero). 
 	struct parametro *mydata = data;
-	sem_wait(&mydata->semaforos_param.sem_cortarfinal);
+	sem_wait(&mydata->semaforos_param.sem_cortarFinal);
 	//llamo a la funcion imprimir le paso el struct y la accion de la funcion
 	imprimirAccion(mydata,accion);
 	//uso sleep para simular que que pasa tiempo
 	sleep(3);
-	//doy la señal a la siguiente accion (cortarfinal me habilita armar)
+	//doy la señal a la siguiente accion (cortarFinal me habilita armar)
 	sem_post(&mydata->semaforos_param.sem_armar);
 	pthread_exit(NULL);
 }
@@ -221,7 +221,7 @@ void* ejecutarReceta(void *i) {
     	sem_t sem_empanar;
     	sem_t sem_freir;
     	pthread_mutex_t mutex_freir;
-    	sem_t sem_cortarfinal;
+    	sem_t sem_cortarFinal;
     	sem_t sem_armar;
     	sem_t sem_armar2;
 	
@@ -254,7 +254,7 @@ void* ejecutarReceta(void *i) {
 	pthread_data->semaforos_param.sem_empanar = sem_empanar;
 	pthread_data->semaforos_param.sem_freir = sem_freir;
 	mutex_freir = mutex_freir;
-	pthread_data->semaforos_param.sem_cortarfinal = sem_cortarfinal;
+	pthread_data->semaforos_param.sem_cortarFinal = sem_cortarFinal;
 	pthread_data->semaforos_param.sem_armar = sem_armar;
 	pthread_data->semaforos_param.sem_armar2 = sem_armar2;
 	
@@ -298,7 +298,7 @@ void* ejecutarReceta(void *i) {
 	sem_init(&(pthread_data->semaforos_param.sem_empanar), 0, 0);
 	sem_init(&(pthread_data->semaforos_param.sem_freir), 0, 0);
 	pthread_mutex_init(&(mutex_freir),NULL);
-	sem_init(&(pthread_data->semaforos_param.sem_cortarfinal), 0, 0);
+	sem_init(&(pthread_data->semaforos_param.sem_cortarFinal), 0, 0);
 	sem_init(&(pthread_data->semaforos_param.sem_armar), 0, 0);
 	sem_init(&(pthread_data->semaforos_param.sem_armar2), 0, 0);
 	
@@ -306,7 +306,7 @@ void* ejecutarReceta(void *i) {
 	int rc;
 	rc = pthread_create(&p1,                        //identificador unico
                         NULL,                          //atributos del thread
-                        cortarcondimentosiniciales,    //funcion a ejecutar
+                        cortarCondimentosIniciales,    //funcion a ejecutar
                         pthread_data);                 //parametros de la funcion a ejecutar, pasado por referencia
 	rc = pthread_create(&p2,                       //identificador unico
                         NULL,                          //atributos del thread
@@ -326,7 +326,7 @@ void* ejecutarReceta(void *i) {
                         pthread_data);                 //parametros de la funcion a ejecutar, pasado por referencia
 	rc = pthread_create(&p6,                       //identificador unico
                         NULL,                          //atributos del thread
-                        cortarfinal,    		 //funcion a ejecutar
+                        cortarFinal,    		 //funcion a ejecutar
                         pthread_data);                 //parametros de la funcion a ejecutar, pasado por referencia
         rc = pthread_create(&p7,                       //identificador unico
                         NULL,                          //atributos del thread
@@ -360,7 +360,7 @@ void* ejecutarReceta(void *i) {
 	sem_destroy(&sem_empanar);
 	sem_destroy(&sem_freir);
 	pthread_mutex_destroy(&mutex_freir);
-	sem_destroy(&sem_cortarfinal);
+	sem_destroy(&sem_cortarFinal);
 	sem_destroy(&sem_armar);
 	sem_destroy(&sem_armar2);
 	
