@@ -18,6 +18,10 @@ Necesitamos demostrar la concurrencia y organización para poder simular una com
 
 Veamos como se comporta inicialmente con un pseudocódigo básico:
 ```c
+
+semáforos y mutex;
+acciones, ingredientes y equipos;
+
 main {
   creamos e inicializamos hilos de equipos;
   semáforo_hornear seteado en 2;
@@ -35,9 +39,58 @@ imprimirAccion {
 }
 
 cortarCondimentosIniciales {
-//No necesita esperar la señal de nadie ya que es el primer paso de la receta
-  cortar;
-//Doy la señal a la siguiente accion (cortarcondimentosiniciales me habilita mezclar)
+  //No necesita esperar la señal de nadie ya que es el primer paso de la receta
+  cortarCondimentosIniciales;
   v(sem_mezclar);
+}
+
+mezclar {
+  p(sem_mezclar);
+  mezclar;
+  v(sem_salar);
+}
+
+salar {
+  lock(mutex_salar);
+  p(sem_salar);
+  salar;
+  v(sem_empanar);
+  unlock(mutex_salar);
+}
+
+empanar {
+  p(sem_empanar);
+  empanar;
+  v(sem_freir);
+}
+
+freir {
+  lock(mutex_freir);
+  p(sem_freir);
+  freir;
+  v(sem_cortarFinal);
+  unlock(mutex_freir);
+}
+
+hornear {
+  //Puede empezar desde el comienzo de la competencia y es compartido
+  p(sem_hornear);
+  hornear;
+  v(sem_hornear);
+  v(sem_armar2);
+}
+
+cortarFinal {
+  p(sem_cortarFinal);
+  cortarFinal;
+  v(sem_armar);
+}
+
+armar {
+  p(sem_armar);
+  p(sem_armar2);
+  armar;
+  print(Ganador);
+  exit;
 }
 ```
