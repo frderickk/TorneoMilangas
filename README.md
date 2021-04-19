@@ -30,7 +30,7 @@ _Veamos como se comporta inicialmente con un pseudocódigo básico:_
 
 - Cada hilo apunta a la función *ejecutarReceta()*.
 
-  - *ejecutarReceta() :*  crea y setea los hilos y semáforos necesarios para la ejecución. Cada hilo creado aqui representa los pasos de dicha receta y apuntan a sus funciones correspondientes, por ejemplo el hilo del paso 1, apunta a la función cortar(), que es el primer paso de la receta. También dentro de esta función, leemos la receta.
+  - *ejecutarReceta() :*  crea y setea los hilos y semáforos necesarios para la ejecución. Cada hilo creado aqui representa los pasos de dicha receta y apuntan a sus funciones correspondientes. También dentro de esta función, leemos la receta.
 
   - *cortarCondimentosIniciales() , mezclar() , salar() , empanar(), freir(), hornear(), cortarfinal(), armar()* :  estas funciones representan los pasos de la receta, en donde dentro de cada una se hace una llamada a imprimirAccion() que imprime por pantalla y también la escribe en un archivo. En cada función mencionada, con ayuda de los semáforos, se logra sincronizar los pasos para ejecutarlos en el orden que plantea la receta, y con ayuda de los mutex, solo un equipo a la vez podrá acceder a los elementos de la cocina (salero, horno o plancha para freir). 
   En *armarHamburguesa()* indicamos por pantalla y escribimos en el archivo el ganador de la competencia.
