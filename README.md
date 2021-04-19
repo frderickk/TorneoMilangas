@@ -22,7 +22,7 @@ _Necesitamos demostrar la concurrencia y organización para poder simular una co
 
 _Veamos como se comporta inicialmente con un pseudocódigo básico:_
 
-Los mutex "salero" y "freir" cumplen la función de comprobar si algún equipo está utilizando alguno de los elementos de cocina y de ser así, negarle su uso a los otros equipos. 
+Los mutex para el salero y para freir cumplen la función de comprobar si algún equipo está utilizando alguno de los elementos de cocina y de ser así, negarle su uso a los otros equipos. 
 
 También definimos un semáforo para el horno y poder setearle la cantidad de panes que pueden cocinarse en este.
 
@@ -34,6 +34,8 @@ Cada hilo apunta a la función *ejecutarReceta()*.
 
 - *cortarCondimentosIniciales() , mezclar() , salar() , empanar(), freir(), hornear(), cortarfinal(), armar()* :  estas funciones representan los pasos de la receta, en donde dentro de cada una se hace una llamada a imprimirAccion() que imprime por pantalla y también la escribe en un archivo. En cada función mencionada, con ayuda de los semáforos, se logra sincronizar los pasos para ejecutarlos en el orden que plantea la receta, y con ayuda de los mutex, solo un equipo a la vez podrá acceder a los elementos de la cocina (salero, horno o plancha para freir). 
   En *armarHamburguesa()* indicamos por pantalla y escribimos en el archivo el ganador de la competencia.
+  
+------------
   
 ```c
 
@@ -112,8 +114,6 @@ armar {
   exit;
 }
 ```
-
-### Flujo del programa ⌨️
 
 ------------
 
