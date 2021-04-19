@@ -4,7 +4,7 @@
 
 
 
-# Introduccion 📋
+# Intro 📋
 
 _En la cocina de Subway Argento compiten cuatro equipos de cocineros
 para ganarse el puesto de trabajo en el local. ¿Quién será el primero en
