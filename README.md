@@ -6,6 +6,8 @@
 
 # Intro 📋
 
+------------
+
 _En la cocina de Subway Argento compiten cuatro equipos de cocineros
 para ganarse el puesto de trabajo en el local. ¿Quién será el primero en
 entregar 1 sándwich de milanesa terminado, de 15 cm, al dueño del
@@ -15,6 +17,8 @@ _Necesitamos demostrar la concurrencia y organización para poder simular una co
 
 
 ### Pseudocódigo 📦
+
+------------
 
 _Veamos como se comporta inicialmente con un pseudocódigo básico:_
 ```c
@@ -97,8 +101,12 @@ armar {
 
 ### Flujo del programa ⌨️
 
+------------
+
 ![PSEUDO](https://user-images.githubusercontent.com/22090492/115168134-43e8d800-a090-11eb-9221-f3ee32743eba.png)
 
 ## Autor ✒️
+
+------------
 
 * **Federico Farias** - *Estudiante de Sistemas UNGS* - [Github](https://github.com/frderickk)
