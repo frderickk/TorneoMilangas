@@ -97,4 +97,8 @@ armar {
 
 ### Flujo de la competición
 
-![PSEUDO](https://user-images.githubusercontent.com/22090492/115167977-cd4bda80-a08f-11eb-872b-a9ce424006de.png)
+![PSEUDO](https://user-images.githubusercontent.com/22090492/115168134-43e8d800-a090-11eb-9221-f3ee32743eba.png)
+
+## Autor ✒️
+
+* **Federico Farias** - *Trabajo Inicial* - [villanuevand](https://github.com/frderickk)
