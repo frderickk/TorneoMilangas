@@ -123,11 +123,3 @@ armar {
 ------------
 
 ![prueba](https://user-images.githubusercontent.com/22090492/115170533-43077480-a097-11eb-9377-1ec8e7709821.png)
-
-
-
-## Autor ✒️
-
-------------
-
-* **Federico Farias** - *Estudiante de Sistemas UNGS* - [Github](https://github.com/frderickk)
