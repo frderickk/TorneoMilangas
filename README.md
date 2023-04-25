@@ -1,8 +1,5 @@
 # **:hamburger:Subway Argento:hamburger:**
-## Trabajo Práctico de Semáforos y Threads, Sistemas Operativos y Redes
-
-
-
+## Semáforos y Threads
 
 # Intro 📋
 
